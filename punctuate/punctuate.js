@@ -5,16 +5,10 @@ module.exports = function(RED) {
     this.on('input', function (msg) {
         msg.punctuated = msg.transcription.toUpperCase();
         node.send(msg);
+        // TO ADD:
+        // - Enable msg.pause input
+        // - Insert Watson-derived code here to do punctuation (see https://github.com/watson-developer-cloud/speech-javascript-sdk/blob/master/speech-to-text/format-stream.js)
 
-      //verifier(cert_url, signature, body, function(er) {
-      //  //if (er) {
-      //  //  node.error('error validating the alexa cert:' + er);
-      //  //  msg.res.status(401).json({ status: 'failure', reason: er });
-      //  //} else {
-      //  //  node.log('successfully validated alexa');
-      //  //  node.send(msg);
-      //  //}
-      //});
     });
   }
   RED.nodes.registerType('punctuate', punctuateNode);

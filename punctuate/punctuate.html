@@ -23,6 +23,9 @@
 
 <script type="text/x-red" data-help-name="punctuate">
     <p>A simple node that punctuates a text string.</p>
-    <p>Input text via msg.transcription.  Result will be output on msg.punctuated.</p>
+    <p>There are two inputs:</p>
+    <p>1) msg.transcription: the original text string to be punctuated</p>
+    <p>2) msg.pause: the string signifying a "pause" in the original speech.  For Watson, this is typically "%HESITATION".</p>
+    <p>The punctuated string will be output as msg.punctuated</p>
     <p>Based on the <a href="https://www.npmjs.com/package/node-red-contrib-punctuate">punctuate node module.</a></p>
 </script>
