@@ -3,7 +3,7 @@ module.exports = function(RED) {
     RED.nodes.createNode(this, config);
     var node = this;
     this.on('input', function (msg) {
-        msg.transcription = msg.transcription.toUpperCase();
+        msg.punctuated = msg.transcription.toUpperCase();
         node.send(msg);
 
       //verifier(cert_url, signature, body, function(er) {
