@@ -2,6 +2,9 @@
 Thumbs.db
 ehthumbs.db
 
+# created by npm when errors occur
+npm-debug.log
+
 # Folder config file
 Desktop.ini
 
