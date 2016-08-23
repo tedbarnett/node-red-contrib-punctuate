@@ -3,7 +3,7 @@ module.exports = function(RED) {
     RED.nodes.createNode(this, config);
     var node = this;
     this.on('input', function (msg) {
-        msg.punctuated = msg.transcription.toUpperCase();
+        msg.punctuated = msg.transcription.replace(/%HESITATION/g, '.');
         node.send(msg);
         // TO ADD:
         // - Enable msg.pause input
