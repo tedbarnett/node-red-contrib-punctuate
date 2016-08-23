@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    RED.nodes.registerType('punctuate',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value: '' }
+        },
+        inputs:1,
+        outputs:1,
+        icon: 'function.png',
+        label: function() {
+            return this.name||'punctuate';
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="punctuate">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="punctuate">
+    <p>A simple node that punctuates a text string.</p>
+    <p>Input text via msg.transcription.  Result will be output on msg.punctuated.</p>
+    <p>Based on the <a href="https://www.npmjs.com/package/node-red-contrib-punctuate">punctuate node module.</a></p>
+</script>
